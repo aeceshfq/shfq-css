@@ -157,3 +157,6 @@ a.sidebar-link svg {
     width: 400px;
     margin-left: 2rem;
 }
+.Actions a {
+    color: white;
+}
