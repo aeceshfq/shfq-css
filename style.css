@@ -1,8 +1,9 @@
-:root{
+:root {
     --border-color: #dfe3e8;
     --background-color: #f4f6f8;
     --button-border-radius: 4px;
 }
+
 html {
     height: 100%;
 }
@@ -111,7 +112,8 @@ a.sidebar-link svg {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
-.Page button.button{
+
+.Page button.button {
     border-radius: var(--button-border-radius);
 }
 
@@ -132,6 +134,26 @@ a.sidebar-link svg {
     border-top: 1px solid #ddd;
     padding: 2rem 0rem;
 }
-.fullWidth{
+
+.fullWidth {
     max-width: 100%;
+}
+
+.Layout {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.layoutSection {
+    width: 100%;
+    background-color: #0066e2;
+}
+
+.layoutSection.sectionOneHalf {
+    width: 50%;
+}
+.layoutSection.sectionOneThird {
+    width: 400px;
+    margin-left: 2rem;
 }
