@@ -1,0 +1,137 @@
+:root{
+    --border-color: #dfe3e8;
+    --background-color: #f4f6f8;
+    --button-border-radius: 4px;
+}
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+
+.home-dashboard {
+    background-color: var(--background-color);
+    width: 100%;
+}
+
+nav.sidebar {
+    height: 100vh;
+    border-right: 1px solid var(--border-color);
+}
+
+.sidebar-section {
+    margin-top: 16px;
+}
+
+.sidebar_sub_header {
+    text-align: center;
+}
+
+
+.sidebar-brand {
+    text-align: center;
+    padding: 13px;
+}
+
+ul.sidebar-nav {
+    margin: 0;
+    padding: 0;
+}
+
+a.sidebar-link {
+    color: black;
+    cursor: pointer;
+    display: block;
+    font-weight: 400;
+    padding: 0.2rem 1.625rem;
+    text-decoration: none;
+    align-items: center;
+    display: flex;
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
+}
+
+.content-wrapper .title {
+    text-align: center;
+    font-size: 30px;
+}
+
+a.sidebar-link svg {
+    margin-right: 14px;
+}
+
+.home-dashboard .card {
+    padding: 0 1rem;
+}
+
+
+
+.titleBar .Heading {
+    display: flex;
+    align-items: center;
+}
+
+.home-dashboard .button {
+    margin: 0;
+}
+
+.titleBar button.button {
+    display: flex;
+    align-items: center;
+    border-radius: var(--button-border-radius);
+}
+
+.titleBar button.button svg {
+    width: 30px;
+    height: 17px;
+    margin-right: 7px;
+}
+
+.titleBar .Heading button.button {
+    margin-right: 13px;
+}
+
+.titleBar button.button svg path {
+    fill: white;
+}
+
+.titleBar .title-name {
+    font-size: 25px;
+    color: #191919;
+}
+
+/* FRAMEWORK CLASS PATTERN  */
+.Page {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.Page button.button{
+    border-radius: var(--button-border-radius);
+}
+
+.titleBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0rem;
+}
+
+.FooterActions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0rem;
+    border-top: 1px solid #ddd;
+    padding: 2rem 0rem;
+}
+.fullWidth{
+    max-width: 100%;
+}
