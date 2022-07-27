@@ -1,7 +1,9 @@
 :root {
     --border-color: #dfe3e8;
-    --background-color: #f4f6f8;
+    --background-color: #f6f6f7;
     --button-border-radius: 4px;
+    --border: 1px solid var(--border-color);
+    --background-color-hovered: #f1f2f3;
 }
 
 html {
@@ -10,91 +12,121 @@ html {
 
 body {
     min-height: 100%;
+    background-color: var(--background-color) !important;
 }
 
-.home-dashboard {
-    background-color: var(--background-color);
+/* main structure */
+.MainHeader {
+    position: fixed;
+    height: 50px;
+    background-color: #fff;
     width: 100%;
+    top: 0;
+    z-index: 2;
+    border-bottom: var(--border);
 }
 
-nav.sidebar {
-    height: 100vh;
-    border-right: 1px solid var(--border-color);
+.MainMenu {
+    position: fixed;
+    top: 50px;
+    bottom: 0;
+    height: calc(100% - 50px);
+    left: 0;
+    width: 230px;
+    overflow: auto;
+    border-right: var(--border);
 }
 
-.sidebar-section {
-    margin-top: 16px;
+.MainBody {
+    position: absolute;
+    left: 230px;
+    width: calc(100% - 230px);
+    top: 50px;
 }
 
-.sidebar_sub_header {
-    text-align: center;
+
+.BrandLogo img {
+    max-height: 50px;
 }
 
+/* end main structure */
 
-.sidebar-brand {
-    text-align: center;
-    padding: 13px;
+.menuSection {
+    border-bottom: 1px solid var(--border-color);
+    letter-spacing: 1px;
+    font-size: 15px;
+    padding-top: 0.8rem;
 }
 
-ul.sidebar-nav {
+.menuSection:last-child {
+    border-bottom: 0px;
+}
+
+.menuHeading {
+    text-transform: uppercase;
+    font-size: 11px;
+    padding: 4px 12px;
+    letter-spacing: 2px;
+}
+
+.menuSection ul {
+    padding: 0px 12px;
+}
+
+.menu-link:hover {
+    background: #f1f2f3;
+    color: inherit;
+}
+
+a.menu-link.active {
+    background-color: #edeeef;
+    color: #007bba;
+    border-left: 3px solid
+}
+
+ul.menu-nav {
     margin: 0;
     padding: 0;
 }
 
-a.sidebar-link {
+
+.menu-link {
     color: black;
     cursor: pointer;
     display: block;
     font-weight: 400;
-    padding: 0.2rem 1.625rem;
+    padding: 0.4rem 1rem;
     text-decoration: none;
     align-items: center;
     display: flex;
-    margin-top: 0.6rem;
-    margin-bottom: 0.6rem;
 }
 
-.content-wrapper .title {
-    text-align: center;
-    font-size: 30px;
+.menu-link svg {
+    margin-right: 7px;
+    width: 15px;
+    height: 15px;
 }
 
-a.sidebar-link svg {
-    margin-right: 14px;
+.button {
+    margin-bottom: 0 !important;
+    color: white !important;
+    border-radius: var(--button-border-radius) !important;
+    padding: 0.6rem 0.7rem !important;
+    border: none !important;
 }
 
-.home-dashboard .card {
-    padding: 0 1rem;
-}
-
-
-
-.titleBar .Heading {
-    display: flex;
-    align-items: center;
-}
-
-.home-dashboard .button {
-    margin: 0;
-}
-
-.titleBar button.button {
-    display: flex;
-    align-items: center;
-    border-radius: var(--button-border-radius);
-}
-
-.titleBar button.button svg {
-    width: 30px;
-    height: 17px;
+svg {
+    width: 11px;
+    height: 11px;
     margin-right: 7px;
 }
 
-.titleBar .Heading button.button {
+.Heading .button {
     margin-right: 13px;
 }
 
-.titleBar button.button svg path {
+
+svg path {
     fill: white;
 }
 
@@ -103,7 +135,70 @@ a.sidebar-link svg {
     color: #191919;
 }
 
-/* FRAMEWORK CLASS PATTERN  */
+.titleBar .Actions {
+    display: flex;
+    flex-direction: row-reverse;
+    white-space: nowrap;
+    position: relative;
+    height: fit-content;
+}
+
+.titleBar .Actions .primaryAction {
+    margin-left: .28rem;
+}
+
+
+.Heading {
+    display: flex;
+}
+
+.pageContent .list-link:hover {
+    background: var(--background-color);
+    color: inherit;
+}
+
+.pageContent a {
+    color: inherit;
+}
+
+.pageContent .list-link {
+    flex-grow: 1;
+    padding: 0.8rem 1rem;
+}
+
+.Actions a {
+    color: white;
+}
+
+.pageContent li {
+    list-style: none;
+    border-bottom: 1px solid #dddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pageContent ul {
+    margin: 0;
+}
+
+.pageContent li svg {
+    width: 12px;
+    height: 12px;
+    margin-right: 8px;
+}
+
+.pageContent li svg path {
+    fill: white;
+}
+
+.pageContent li:last-child {
+    border: none;
+    padding-bottom: 0;
+}
+
+
+/* FRAMEWORK PAGE CLASS PATTERN  */
 .Page {
     max-width: 1024px;
     margin: 0 auto;
@@ -113,14 +208,9 @@ a.sidebar-link svg {
     margin-bottom: 2rem;
 }
 
-.Page button.button {
-    border-radius: var(--button-border-radius);
-}
-
 .titleBar {
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
     margin: 2rem 0rem;
 }
@@ -145,18 +235,120 @@ a.sidebar-link svg {
     flex-wrap: wrap;
 }
 
-.layoutSection {
+/* FRAMEWORK PAGE CLASS PATTERN END */
+
+/* Modal Popup */
+.modal {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
     width: 100%;
-    background-color: #0066e2;
+    height: 100%;
+    background: #000000c7;
+    display: none;
 }
 
-.layoutSection.sectionOneHalf {
-    width: 50%;
+.modal.visible {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
 }
-.layoutSection.sectionOneThird {
-    width: 400px;
-    margin-left: 2rem;
+
+.modalHeader {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 1rem 1rem;
 }
-.Actions a {
-    color: white;
+
+.btn-cancel {
+    cursor: pointer;
+}
+
+.modal .modalHeader svg path {
+    fill: black;
+}
+
+.modalBody {
+    background: white;
+    width: 26rem;
+    margin: auto;
+    border-radius: var(--button-border-radius);
+}
+
+.modalContent {
+    padding: 1rem 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.modalContent p {
+    margin-bottom: 0;
+}
+
+.modalActions {
+    text-align: end;
+    border-top: 1px solid var(--border-color);
+    padding: 1rem;
+}
+
+/* Modal Popup End*/
+
+.titleBar-Actions--mobileView {
+    display: none;
+}
+
+.titleBar-Actions--mobileView svg path {
+    fill: black;
+}
+
+.titleBar-Actions--mobileView .button svg {
+    margin: 0;
+}
+
+.titleBar-Actions--mobileView .button {
+    background: transparent;
+    border: var(--border) !important;
+}
+
+.titleBar-Actions--mobileView .button:hover {
+    background: transparent !important;
+}
+
+/* media quries */
+
+@media (max-width: 1002px) {
+    .titleBar-Actions--mobileView {
+        display: block !important;
+        height: fit-content;
+    }
+
+    .titleBar .Actions .secondaryActions {
+        display: none;
+    }
+
+    .titleBar .Actions .secondaryActions.show_menu {
+        display: flex;
+        width: fit-content;
+        height: fit-content;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 50px;
+        background: white;
+        border-radius: var(--button-border-radius);
+        margin-top: 42px;
+        box-shadow: 0 1px 2px hsl(0deg 0% 0% / 5%), 0 1px 4px hsl(0deg 0% 0% / 5%), 0 2px 8px hsl(0deg 0% 0% / 5%);
+    }
+
+    .titleBar .Actions .secondaryActions.show_menu .button {
+        margin: 3px;
+        background: transparent;
+        color: black !important;
+        border-bottom: 1px solid !important;
+        border-radius: 0px !important;
+        margin-bottom: 4px !important;
+    }
 }
