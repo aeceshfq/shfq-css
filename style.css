@@ -23,7 +23,11 @@ body {
     width: 100%;
     top: 0;
     z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     border-bottom: var(--border);
+    padding: 0px 10px;
 }
 
 .MainMenu {
@@ -148,8 +152,14 @@ svg path {
 }
 
 
-.Heading {
+.titleBar .Heading {
     display: flex;
+}
+.titleBar .Heading .headingBtnText {
+    margin-left: 3px;
+}
+.titleBar .Heading svg {
+    margin: 0px;
 }
 
 .pageContent .list-link:hover {
@@ -317,6 +327,58 @@ svg path {
     background: transparent !important;
 }
 
+.popoverToggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+}
+.popoverToggle:hover {
+    background: var(--background-color);
+}
+
+.popoverLabel {
+    margin-left: 4px;
+    font-size: 11px;
+}
+
+.avator {
+    display: inline-block;
+    outline: none;
+    background: #00d359;
+    color: white;
+    border-radius: 50px;
+    padding: 4px;
+    font-size: 10px;
+}
+
+.subHeading {
+    display: inline;
+    color: gray;
+}
+.popoverToggleMenu {
+    position: absolute;
+    right: 64px;
+    background: white;
+    top: 100%;
+    box-shadow: 0 0 0 1px rgb(39 44 48 / 5%), 0 2px 7px 1px rgb(39 44 48 / 16%);
+    max-width: 8rem;
+    width: 100%;
+    display: none;
+}
+.popoverToggleMenu.visible{
+    display: block !important;
+}
+.popoverToggleMenu li.menu-item {
+    font-size: 13px;
+    letter-spacing: 0.2px;
+}
+li.menu-item .menu-link svg path{
+    fill: black;
+}
 /* media quries */
 
 @media (max-width: 1002px) {
