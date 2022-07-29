@@ -4,6 +4,7 @@
     --button-border-radius: 4px;
     --border: 1px solid var(--border-color);
     --background-color-hovered: #f1f2f3;
+    --footerActionsBackground-color : #000000d9;
 }
 
 html {
@@ -155,16 +156,17 @@ svg path {
 .titleBar .Heading {
     display: flex;
 }
+
 .titleBar .Heading .headingBtnText {
     margin-left: 3px;
 }
+
 .titleBar .Heading svg {
     margin: 0px;
 }
 
-.pageContent .list-link:hover {
+.pageContent li.list-item:hover {
     background: var(--background-color);
-    color: inherit;
 }
 
 .pageContent a {
@@ -207,12 +209,68 @@ svg path {
     padding-bottom: 0;
 }
 
+.Page .pageContent .card .list .list-item .Actions {
+    display: none;
+    padding: 0rem 1rem;
+}
+
+.Page .pageContent .card .list .list-item:hover .Actions {
+    display: block !important;
+}
+
+.Page.actionsFieldTop .footerActionsSaveBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1024px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.Page.actionsFieldTop .FooterActions {
+    top: 0;
+    padding: 0px 10px;
+    border-bottom: var(--border);
+}
+
+
+.Page.actionsFieldBottom {
+    margin-bottom: 4rem;
+}
+
+.actionsFieldBottom .FooterActions {
+    display: flex;
+    width: calc(100% - 230px) !important;
+}
+
+.footerActionsLogo {
+    display: none;
+    width: 230px;
+}
+
+.actionsFieldTop .FooterActions .footerActionsLogo {
+    display: block;
+}
+
+.FooterActions .footerActionsSaveBar .actions-text {
+    display: none;
+}
+.actionsFieldTop .FooterActions .footerActionsSaveBar .actions-text{
+    display: block;
+}
+.actionsFieldBottom .FooterActions .footerActionsSaveBar {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    max-width: 1024px;
+    margin: 0 auto;
+    width: 100%;
+}
 
 /* FRAMEWORK PAGE CLASS PATTERN  */
 .Page {
     max-width: 1024px;
     margin: 0 auto;
-    padding: 0 2rem;
     width: 100%;
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -225,14 +283,23 @@ svg path {
     margin: 2rem 0rem;
 }
 
-.FooterActions {
+.actionsFieldTop .FooterActions, .actionsFieldBottom .FooterActions {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    margin: 2rem 0rem;
     border-top: 1px solid #ddd;
-    padding: 2rem 0rem;
+    position: fixed;
+    width: calc(100%);
+    right: 0;
+    background: var(--footerActionsBackground-color);
+    bottom: 0;
+    height: 50px;
+    z-index: 999;
+    color: white;
+}
+
+.FooterActions.actionsTop {
+    top: 0;
 }
 
 .fullWidth {
@@ -243,6 +310,15 @@ svg path {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.footerA.ctionsSaveBar {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1024px;
+    margin: 0 auto;
+    width: 100%;
+    align-items: center;
 }
 
 /* FRAMEWORK PAGE CLASS PATTERN END */
@@ -270,9 +346,13 @@ svg path {
 
 .modalHeader {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: space-between;
     padding: 1rem 1rem;
+}
+
+.modalHeader .title {
+    font-weight: bold;
 }
 
 .btn-cancel {
@@ -310,6 +390,10 @@ svg path {
 .titleBar-Actions--mobileView {
     display: none;
 }
+.titleBar .Heading a.button {
+    display: flex;
+    align-items: center;
+}
 
 .titleBar-Actions--mobileView svg path {
     fill: black;
@@ -337,6 +421,7 @@ svg path {
     cursor: pointer;
     text-decoration: none;
 }
+
 .popoverToggle:hover {
     background: var(--background-color);
 }
@@ -360,6 +445,7 @@ svg path {
     display: inline;
     color: gray;
 }
+
 .popoverToggleMenu {
     position: absolute;
     right: 64px;
@@ -370,16 +456,20 @@ svg path {
     width: 100%;
     display: none;
 }
-.popoverToggleMenu.visible{
+
+.popoverToggleMenu.visible {
     display: block !important;
 }
+
 .popoverToggleMenu li.menu-item {
     font-size: 13px;
     letter-spacing: 0.2px;
 }
-li.menu-item .menu-link svg path{
+
+li.menu-item .menu-link svg path {
     fill: black;
 }
+
 /* media quries */
 
 @media (max-width: 1002px) {
