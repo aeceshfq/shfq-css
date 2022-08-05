@@ -1,0 +1,1131 @@
+:root {
+    --border-color: #dfe3e8;
+    --background-color: #f6f6f7;
+    --button-border-radius: 4px;
+    --border: 1px solid var(--border-color);
+    --background-color-hovered: #f1f2f3;
+    --footerActionsBackground-color: #000000d9;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    background-color: var(--background-color) !important;
+
+}
+
+/* main structure */
+.MainHeader {
+    position: fixed;
+    height: 50px;
+    background-color: #fff;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: var(--border);
+    padding: 0px 10px;
+}
+
+.MainMenu {
+    position: fixed;
+    top: 50px;
+    bottom: 0;
+    height: calc(100% - 50px);
+    left: 0;
+    width: 230px;
+    overflow: auto;
+    border-right: var(--border);
+    background-color: white;
+}
+
+.MainBody {
+    position: absolute;
+    left: 230px;
+    width: calc(100% - 230px);
+    top: 50px;
+}
+
+
+.BrandLogo img {
+    max-height: 50px;
+}
+
+/* end main structure */
+
+.menuSection {
+    border-bottom: 1px solid var(--border-color);
+    letter-spacing: 1px;
+    font-size: 15px;
+    padding-top: 0.8rem;
+}
+
+.menuSection:last-child {
+    border-bottom: 0px;
+}
+
+.menuHeading {
+    text-transform: uppercase;
+    font-size: 11px;
+    padding: 4px 12px;
+    letter-spacing: 2px;
+}
+
+.menuSection ul {
+    padding: 0px 12px;
+}
+
+.menu-link:hover {
+    background: #f1f2f3;
+    color: inherit;
+}
+
+a.menu-link.active {
+    background-color: #edeeef;
+    color: #007bba;
+    border-left: 3px solid
+}
+
+ul.menu-nav {
+    margin: 0;
+    padding: 0;
+}
+
+
+.menu-link {
+    color: black;
+    cursor: pointer;
+    display: block;
+    font-weight: 400;
+    padding: 0.4rem 1rem;
+    text-decoration: none;
+    align-items: center;
+    display: flex;
+}
+
+.menu-link svg {
+    margin-right: 7px;
+    width: 15px;
+    height: 15px;
+}
+
+.button {
+    margin-bottom: 0 !important;
+    color: white !important;
+    border-radius: var(--button-border-radius) !important;
+    padding: 0.6rem 0.7rem !important;
+    border: none !important;
+}
+
+svg {
+    width: 11px;
+    height: 11px;
+    margin-right: 7px;
+}
+
+.Heading .button {
+    margin-right: 13px;
+}
+
+
+.titleBar .title-name {
+    font-size: 25px;
+    color: #191919;
+}
+
+.titleBar .Actions {
+    display: flex;
+    flex-direction: row-reverse;
+    white-space: nowrap;
+    position: relative;
+    height: fit-content;
+}
+
+.titleBar .Actions .primaryAction {
+    margin-left: .28rem;
+}
+
+
+.titleBar .Heading {
+    display: flex;
+}
+
+.titleBar .Heading .headingBtnText {
+    margin-left: 3px;
+}
+
+.titleBar .Heading svg {
+    margin: 0px;
+}
+
+.pageContent li.list-item:hover {
+    background: var(--background-color);
+}
+
+
+.pageContent .list-link {
+    flex-grow: 1;
+    padding: 0.8rem 1rem;
+}
+
+.Actions a {
+    color: white;
+}
+
+.pageContent .list .list-item {
+    list-style: none;
+    border-bottom: 1px solid #dddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pageContent ul {
+    margin: 0;
+}
+
+.pageContent li svg {
+    width: 12px;
+    height: 12px;
+    margin-right: 8px;
+}
+
+.pageContent li svg path {
+    fill: white;
+}
+
+
+.Page .pageContent .card .list .list-item .Actions {
+    display: none;
+    padding: 0rem 1rem;
+}
+
+.Page .pageContent .card .list .list-item:hover .Actions {
+    display: block !important;
+}
+
+.Page.actionsFieldTop .footerActionsSaveBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1024px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.Page.actionsFieldTop .FooterActions {
+    top: 0;
+    padding: 0px 10px;
+    border-bottom: var(--border);
+}
+
+
+.Page.actionsFieldBottom {
+    margin-bottom: 4rem;
+}
+
+.actionsFieldBottom .FooterActions {
+    display: flex;
+    width: calc(100% - 230px) !important;
+}
+
+.footerActionsLogo {
+    display: none;
+    width: 230px;
+}
+
+.actionsFieldTop .FooterActions .footerActionsLogo {
+    display: block;
+}
+
+.FooterActions .footerActionsSaveBar .actions-text {
+    display: none;
+}
+
+.actionsFieldTop .FooterActions .footerActionsSaveBar .actions-text {
+    display: block;
+}
+
+.actionsFieldBottom .FooterActions .footerActionsSaveBar {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    max-width: 1024px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* FRAMEWORK PAGE CLASS PATTERN  */
+.Page {
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.titleBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2rem 0rem;
+}
+
+.actionsFieldTop .FooterActions,
+.actionsFieldBottom .FooterActions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    position: fixed;
+    width: calc(100%);
+    right: 0;
+    background: var(--footerActionsBackground-color);
+    bottom: 0;
+    height: 50px;
+    z-index: 999;
+    color: white;
+}
+
+.FooterActions.actionsTop {
+    top: 0;
+}
+
+.fullWidth {
+    max-width: 100%;
+}
+
+.Layout {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.footerA.ctionsSaveBar {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1024px;
+    margin: 0 auto;
+    width: 100%;
+    align-items: center;
+}
+
+/* FRAMEWORK PAGE CLASS PATTERN END */
+
+/* Modal Popup */
+.modal {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000c7;
+    z-index: 999;
+    display: none;
+}
+
+.modal.visible {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.modalHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+}
+
+.modalHeader .title {
+    font-weight: bold;
+}
+
+.btn-cancel {
+    cursor: pointer;
+}
+
+.modal .modalHeader svg path {
+    fill: black;
+}
+
+.modalBody {
+    background: white;
+    width: 26rem;
+    margin: auto;
+    border-radius: var(--button-border-radius);
+}
+
+.modalContent {
+    padding: 1rem 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.modalContent p {
+    margin-bottom: 0;
+}
+
+.modalActions {
+    text-align: end;
+    border-top: 1px solid var(--border-color);
+    padding: 1rem;
+}
+
+/* Modal Popup End*/
+
+.titleBar-Actions--mobileView {
+    display: none;
+}
+
+.titleBar .Heading a.button {
+    display: flex;
+    align-items: center;
+}
+
+.titleBar-Actions--mobileView svg path {
+    fill: black;
+}
+
+.titleBar-Actions--mobileView .button svg {
+    margin: 0;
+}
+
+.titleBar-Actions--mobileView .button {
+    background: transparent;
+    border: var(--border) !important;
+}
+
+.titleBar-Actions--mobileView .button:hover {
+    background: transparent !important;
+}
+
+.popoverToggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.popoverToggle:hover {
+    background: var(--background-color);
+}
+
+.popoverLabel {
+    margin-left: 4px;
+    font-size: 11px;
+}
+
+.avator {
+    display: inline-block;
+    outline: none;
+    background: #00d359;
+    color: white;
+    border-radius: 50px;
+    padding: 4px;
+    font-size: 10px;
+}
+
+.subHeading {
+    display: inline;
+    color: gray;
+}
+
+.popoverToggleMenu {
+    position: absolute;
+    right: 64px;
+    background: white;
+    top: 100%;
+    box-shadow: 0 0 0 1px rgb(39 44 48 / 5%), 0 2px 7px 1px rgb(39 44 48 / 16%);
+    max-width: 8rem;
+    width: 100%;
+    display: none;
+}
+
+.popoverToggleMenu.visible {
+    display: block !important;
+}
+
+.popoverToggleMenu li.menu-item {
+    font-size: 13px;
+    letter-spacing: 0.2px;
+}
+
+li.menu-item .menu-link svg path {
+    fill: black;
+}
+
+/* media quries */
+
+@media (max-width: 1002px) {
+    .titleBar-Actions--mobileView {
+        display: block !important;
+        height: fit-content;
+    }
+
+    .titleBar .Actions .secondaryActions {
+        display: none;
+    }
+
+    .titleBar .Actions .secondaryActions.show_menu {
+        display: flex;
+        width: fit-content;
+        height: fit-content;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 50px;
+        background: white;
+        border-radius: var(--button-border-radius);
+        margin-top: 42px;
+        box-shadow: 0 1px 2px hsl(0deg 0% 0% / 5%), 0 1px 4px hsl(0deg 0% 0% / 5%), 0 2px 8px hsl(0deg 0% 0% / 5%);
+    }
+
+    .titleBar .Actions .secondaryActions.show_menu .button {
+        margin: 3px;
+        background: transparent;
+        color: black !important;
+        border-bottom: 1px solid !important;
+        border-radius: 0px !important;
+        margin-bottom: 4px !important;
+    }
+}
+
+
+
+
+
+/* Tour Booking */
+
+.customInputField .button {
+    margin-top: 1rem;
+}
+
+.moreRowsSection input.input_field {
+    margin-bottom: 0;
+    border: none;
+    border-top: none;
+    border-left: 1px solid #cacaca;
+    border-right: 1px solid #cacaca;
+    border-top: 1px solid #cacaca;
+}
+
+.moreRowsSection input.input_field:last-child {
+    border-bottom: 1px solid #cacaca !important;
+}
+
+.input-group-label {
+    font-size: 12px;
+}
+
+
+
+/* viator theme layout CSS */
+body {
+    background-color: #f2f2f2 !important;
+    letter-spacing: .2px;
+}
+
+.card {
+    background: white !important;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 8%) !important;
+    border: none !important;
+}
+
+.headerNavmenu .Heading {
+    display: flex;
+    align-items: center;
+    color: gray;
+    font-size: 12px;
+}
+
+.headerNavmenu .Heading .sub_divider {
+    padding: 0px 9px;
+}
+
+.headerNavmenu .sub_Heading {
+    font-size: 19px;
+    color: black;
+    padding: 7px 14px;
+    cursor: pointer;
+    transition: all 1s ease;
+    border-radius: 10px;
+}
+
+.headerNavmenu .sub_Heading:hover {
+    background: #efefef;
+}
+
+.MainMenu .menu-item.tabs-title {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+.MainMenu .menu-item .menu-link {
+    color: black !important;
+    padding: 14px 0 14px 16px;
+    line-height: 1.5;
+}
+
+.card .card-section .header_title {
+    margin-bottom: 27px;
+    font-size: 27px;
+}
+
+.card .card-section {
+    padding: 27px;
+}
+
+.card .card-section .card_btn {
+    padding: 10px 0px;
+}
+
+.card .card-section .card_actions {
+    padding: 10px 0px;
+}
+
+.input__field {
+    display: flex;
+}
+
+[type='file'],
+[type='checkbox'],
+[type='radio'] {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 9px;
+    padding: 0;
+    border: 1px solid hsl(0, 0%, 60%);
+    background-color: hsl(0, 0%, 100%);
+    position: relative;
+    margin-bottom: 9px;
+    margin-bottom: 9px;
+}
+
+.card .card-section .subheader {
+    margin: 2rem 0px;
+    font-size: 21px;
+}
+
+.form-group-title {
+    margin-bottom: 11px;
+    font-size: 17px;
+}
+
+.form-group-subTitle {
+    color: gray;
+    font-size: 14px;
+}
+
+.pickupSubSection {
+    margin-bottom: 24px;
+}
+
+.pickupOptionSection {
+    margin-bottom: 27px;
+}
+
+
+.aboutTourList .aboutTourList_Title {
+    padding: 10px 0 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    cursor: auto;
+    cursor: initial;
+    border-bottom: 1px solid hsl(0, 0%, 85%);
+}
+
+.aboutTourList_Details {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.aboutTourList .aboutTourList_Actions svg path {
+    fill: #007bba;
+}
+
+.aboutTourList_Section .aboutTourList_Actions {
+    display: flex;
+    height: fit-content;
+    position: relative;
+}
+
+.aboutTourList .aboutTourList_Actions svg {
+    width: 16px !important;
+    height: 17px !important;
+}
+
+.aboutTourList_Count {
+    font-size: 17px;
+    font-weight: bold;
+    display: inline-block;
+    height: fit-content;
+    margin-right: 10px;
+}
+
+.aboutTourList_Section {
+    padding: 14px;
+    display: flex;
+    color: #282828;
+    border-bottom: 1px solid hsl(0, 0%, 85%);
+}
+
+.aboutTourList_FooterActions {
+    padding: 10px;
+    margin: 12px 0px 6px 0px;
+}
+
+.aboutTourList_Text {
+    color: hsl(181, 64%, 26%);
+    cursor: pointer;
+}
+
+.aboutTour a.aboutTour_Link {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: hsl(207, 100%, 3.5%);
+}
+
+.aboutTourList {
+    background-color: hsl(0deg 0% 96%);
+    margin-top: 16px;
+    border: 1px solid hsl(0, 0%, 85%);
+    padding: 16px;
+    border-radius: 3px;
+}
+
+.aboutTourList_Section:last-child {
+    border: none;
+}
+
+.aboutTourList_button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+}
+
+li.accordion-item {
+    margin-bottom: 36px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.accordion-title {
+    border: none !important;
+}
+
+.fullPageContent .card {
+    margin-bottom: 1.875rem;
+}
+
+.collapseField {
+    text-align: end;
+    font-size: 12px;
+}
+
+.collapseField .collapseButton {
+    color: gray;
+    cursor: pointer;
+    padding: 13px 0px;
+}
+
+.inputLabelSmall input {
+    width: 8rem;
+    text-align: center;
+}
+
+fieldset.inputFieldset {
+    margin: 20px 0px;
+}
+
+.inputLabelSmall {
+    margin-top: 20px;
+}
+
+.compareSections {
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+.compareSections .fieldContent {
+    display: flex;
+}
+
+.compareSections .fieldLabel .input__field input {
+    margin-bottom: 0;
+}
+
+.compareSections .fieldLabel .input__field {
+    align-items: center;
+    margin: 0px 15px 0px 0px;
+    max-width: 168px;
+    flex-wrap: wrap;
+    min-width: 130px;
+}
+
+.compareSections .inputLabelSmall input {
+    width: 4rem;
+    margin: 0;
+}
+
+.compareSections .fieldContent .inputLabelSmall {
+    margin-top: 0;
+}
+
+.inclusionExclusion .aboutTourList_Section {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.spaceCompare {
+    display: flex;
+    align-items: center;
+    margin: 0px 11px;
+}
+
+.selectionsInputField {
+    margin: 22px 0px;
+}
+
+.aboutTourList .aboutTourList_Title svg path {
+    fill: #007bba;
+}
+
+.pricesSchedule {
+    padding: 18px 0px;
+    border-bottom: 1px solid #dddd;
+}
+
+.pricesSchedule .addMoreFields {
+    padding: 6px 0px;
+    cursor: pointer;
+}
+
+.note {
+    padding: 10px 0px;
+    font-size: 14px;
+    color: #808080;
+}
+
+.pricingSchedules {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 28px 20px 20px 20px;
+}
+
+.borderedPlanField {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 15px 0px;
+}
+
+.borderedPlanField .contentWrapper {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    color: #282828;
+}
+
+.borderedPlanField .contentWrapper .mediaField button {
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: auto;
+    min-height: 2.5rem;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    line-height: 1.3;
+    cursor: pointer;
+    margin-left: 13px;
+    transition: all 1s ease;
+}
+
+.borderedPlanField .contentWrapper .mediaField button:hover {
+    color: #186b6d;
+    background: #f0fbfc;
+    border-color: #186b6d;
+}
+
+.borderedPlanField .contentWrapper .mediaField {
+    white-space: nowrap;
+}
+
+.textLight {
+    color: gray;
+}
+
+.bookingProcessDetails .form-group-subTitle {
+    margin-top: 18px;
+}
+
+.bookingProcessDetails label {
+    width: 50%;
+}
+
+.meetingCountSection {
+    display: flex;
+    align-items: center;
+    padding: 5px 0px 18px 0px;
+}
+
+.meetingCountSection .locationButton {
+    display: flex;
+    position: relative;
+}
+
+.meetingCountSection .locationButton svg {
+    width: 30px;
+    height: 30px;
+}
+
+.meetingCountSection .locationButton svg path {
+    fill: #007bba;
+}
+
+.locationCount {
+    position: absolute;
+    left: 11px;
+    z-index: 1;
+    color: white;
+    font-size: 14px;
+    top: 2px;
+}
+
+.aboutTourList .aboutTourList_Title .aboutTourList_Actions {
+    position: relative;
+}
+
+.tourListMenu {
+    position: absolute;
+    background: white;
+    right: 0;
+    z-index: 1;
+    top: 38px;
+    padding: 5px 0px;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 8%) !important;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    display: none;
+}
+
+.tourListMenu .tourListMenuItem {
+    cursor: pointer;
+    display: flex;
+    width: auto;
+    font-size: 13px;
+    min-height: 40px;
+    padding: 8px 20px;
+    transition: all 1s ease;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+.tourListMenuItem:hover {
+    background: #efefef;
+}
+
+.tourListMenu .tourListMenuItem.delete {
+    color: red;
+}
+
+.modalEdt {
+    padding: 0 !important;
+}
+
+.modalEdt .modalEditContent .modalFooterActions,
+.modalDlt .modalFooterActions {
+    padding: 14px 12px;
+    text-align: end;
+    border-top: 1px solid #ddd;
+}
+
+.modalEdt .modalHeader.close-button {
+    position: inherit;
+}
+
+.modalEditContent .modalContent .addSchedule {
+    padding: 6px 0px 8px 0px;
+}
+
+.modalEditContent .modalContent .addPrices {
+    padding: 22px 0px 8px 0px;
+    border-top: 1px solid #ddd;
+}
+
+.mediaContent .thumbnail svg path {
+    fill: gray;
+}
+
+.mediaContent .thumbnail svg {
+    width: 22px;
+    height: 22px;
+}
+
+.mediaContent .thumbnail {
+    border: none !important;
+    text-align: center;
+    box-shadow: none;
+}
+
+.mediaContent {
+    border: 1px solid #ddd;
+    padding: 11px;
+    background: #f2f2f2;
+    border-radius: 4px;
+    border-color: #0079f2;
+}
+
+.mediaContent .media-object-section .description {
+    color: gray;
+}
+
+.uploadMedia .featuredMedia label {
+    width: 339px;
+    background: #efefef;
+    border: 2px dashed #006ff2;
+    height: 163px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.uploadMedia .galleryMedia {
+    margin: 19px 0px;
+}
+
+.galleryImage label {
+    width: 100px;
+    height: 100px;
+    border: 2px dashed #006ff2;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.galleryMediaImages {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.uploadMedia .form-group-subTitle {
+    margin: 10px 0px;
+}
+
+
+
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.upload-btn-wrapper input[type=file] {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    opacity: 0;
+    height: 42px;
+    margin: 0;
+}
+
+.featuredMedia .upload-btn-wrapper input[type=file] {
+    top: 58px;
+}
+
+.galleryMedia .upload-btn-wrapper input[type=file] {
+    top: 24px;
+}
+
+.uploadMedia .upload-btn-wrapper svg {
+    width: 38px;
+    height: 38px;
+}
+
+.galleryMedia .upload-btn-wrapper svg {
+    width: 23px;
+    height: 23px;
+}
+
+.addInc_ExcFields {
+    margin-top: 23px;
+    display: flex;
+    align-items: center;
+}
+
+.addInc_ExcFields input[type="text"] {
+    width: 85%;
+    margin-bottom: 0;
+}
+
+.addInc_ExcFields .cancelField {
+    padding: 7px 10px;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 17px;
+}
+
+.compareSections .fieldContent .form-group-subTitle {
+    padding: 0.5rem;
+    font-size: 12px;
+}
+
+.embedLinkYT {
+    margin-top: 28px;
+}
+
+.modalEditContent .dateTimeFields {
+    display: flex;
+    background: white;
+}
+
+.modalEditContent .dateTimeFields .timeField {
+    margin-left: 18px;
+}
+
+.menu-item.tabs-title:last-child {
+    border-bottom: none;
+}
+
+.titleBar .Heading svg path {
+    fill: white;
+}
+.numberAuthentication .inputLabelSmall input {
+    width: 3.4rem;
+    margin-right: 15px;
+}
+.numberAuthentication .inputFields {
+    display: flex;
+}
+.agencyLocationHeader {
+    display: flex;
+    padding: 10px 0px;
+}
+.locationButton svg {
+    width: 23px;
+    height: 23px;
+}
