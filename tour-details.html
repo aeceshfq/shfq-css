@@ -20,7 +20,7 @@
                 <a href="index.html"><img src="./assets/images/logo.png" alt=""></a>
             </div>
             <div class="headerNavmenu">
-                <div class="Heading">Tour to Naran Kaghan <span class="sub_divider">|</span><span
+                <div class="Heading">Tour to Naran Kaghan <span class="sub_divider"></span><span
                         class="sub_Heading">Save & exit</span>
                 </div>
             </div>
@@ -28,7 +28,7 @@
         <div class="MainMenu">
             <div class="menuSection">
                 <ul class="menu-nav no-bullet" data-tabs id="menuTabs">
-                    <li class="menu-item tabs-title is-active"><a href="#panel1v" class="menu-link">Title</a></li>
+                    <li class="menu-item tabs-title is-active"><a href="#title-section" class="menu-link">Title</a></li>
                     <li class="menu-item tabs-title "><a href="#theme-section" class="menu-link">Theme</a></li>
                     <li class="menu-item tabs-title "><a href="#photos-section" class="menu-link">Photos</a></li>
                     <li class="menu-item tabs-title "><a href="#meeting-section" class="menu-link">Meeting & pickup</a>
@@ -53,7 +53,7 @@
             <div class="Page">
                 <div class="pageContent">
                     <div class="details-section" data-tabs-content="menuTabs">
-                        <div class="tabs-panel is-active" id="panel1v">
+                        <div class="tabs-panel is-active" id="title-section">
                             <div class="card">
                                 <div class="card-section">
                                     <div class="header_title">
@@ -189,12 +189,10 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="embedLinkYT">
-                                            <label>
-                                                Youtube Embed Video
-                                                <textarea placeholder="" rows="2"></textarea>
-                                            </label>
-                                        </div>
+                                        <label>
+                                            Youtube Embed Video
+                                            <textarea placeholder="" rows="2"></textarea>
+                                        </label>
 
                                         <div class="form-group-subTitle">
                                             By uploading this photo, I verify that I am the owner or lawful licensee of
@@ -780,12 +778,12 @@
                                         <fieldset class="large-5 cell">
                                             <legend>Is this a private tour?</legend>
                                             <div class="input__field">
-                                                <input type="radio" name="pokemon" value="Red" id="Yes" required>
-                                                <label for="Yes">Yes</label>
+                                                <input type="radio" name="pokemon" value="Red" id="touryes" required>
+                                                <label for="touryes">Yes</label>
                                             </div>
                                             <div class="input__field">
-                                                <input type="radio" name="pokemon" value="Blue" id="No">
-                                                <label for="No">No</label>
+                                                <input type="radio" name="pokemon" value="Blue" id="tourno">
+                                                <label for="tourno">No</label>
                                             </div>
 
                                         </fieldset>
@@ -811,8 +809,8 @@
                                     <fieldset class="inputFieldset">
                                         <legend>How do you price your product?</legend>
                                         <div class="input__field">
-                                            <input type="radio" name="personAuto" value="Per person" id="perperson" checked
-                                                required>
+                                            <input type="radio" name="personAuto" value="Per person" id="perperson"
+                                                checked required>
                                             <label for="perperson">Per person</label>
                                         </div>
                                         <div class="input__field">

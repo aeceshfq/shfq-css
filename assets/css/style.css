@@ -71,9 +71,10 @@ body {
 
 .menuHeading {
     text-transform: uppercase;
-    font-size: 11px;
-    padding: 4px 12px;
-    letter-spacing: 2px;
+    font-size: 9px;
+    padding: 4px 7px;
+    letter-spacing: 1.4px;
+    color: #909097;
 }
 
 .menuSection ul {
@@ -88,7 +89,7 @@ body {
 a.menu-link.active {
     background-color: #edeeef;
     color: #007bba;
-    border-left: 3px solid
+    border-left: 3px solid #007bba;
 }
 
 ul.menu-nav {
@@ -96,6 +97,12 @@ ul.menu-nav {
     padding: 0;
 }
 
+.tabs-title>a:focus,
+.tabs-title>a[aria-selected='true'] {
+    background: #e6e6e6;
+    color: #1779ba;
+    border-left: 3px solid #007bba;
+}
 
 .menu-link {
     color: black;
@@ -170,7 +177,6 @@ svg {
 
 .pageContent .list-link {
     flex-grow: 1;
-    padding: 0.8rem 1rem;
 }
 
 .Actions a {
@@ -568,13 +574,13 @@ body {
 
 .MainMenu .menu-item.tabs-title {
     width: 100%;
-    border-bottom: 1px solid #ddd;
 }
 
 .MainMenu .menu-item .menu-link {
     color: black !important;
     padding: 14px 0 14px 16px;
     line-height: 1.5;
+    border-bottom: 1px solid #ddd;
 }
 
 .card .card-section .header_title {
@@ -587,11 +593,18 @@ body {
 }
 
 .card .card-section .card_btn {
-    padding: 10px 0px;
+    padding: 0.7375rem 0.75rem !important;
+    min-height: 3rem;
+    font-size: 16px;
+    line-height: 1.4;
+    cursor: pointer;
+    white-space: nowrap;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .card .card-section .card_actions {
-    padding: 10px 0px;
+    padding: 15px 0px;
 }
 
 .input__field {
@@ -617,11 +630,6 @@ body {
 .card .card-section .subheader {
     margin: 2rem 0px;
     font-size: 21px;
-}
-
-.form-group-title {
-    margin-bottom: 11px;
-    font-size: 17px;
 }
 
 .form-group-subTitle {
@@ -1094,9 +1102,6 @@ fieldset.inputFieldset {
     font-size: 12px;
 }
 
-.embedLinkYT {
-    margin-top: 28px;
-}
 
 .modalEditContent .dateTimeFields {
     display: flex;
@@ -1114,18 +1119,66 @@ fieldset.inputFieldset {
 .titleBar .Heading svg path {
     fill: white;
 }
+
 .numberAuthentication .inputLabelSmall input {
     width: 3.4rem;
     margin-right: 15px;
 }
+
 .numberAuthentication .inputFields {
     display: flex;
 }
+
 .agencyLocationHeader {
     display: flex;
     padding: 10px 0px;
 }
+
 .locationButton svg {
     width: 23px;
     height: 23px;
+}
+
+.MainMenu.menuIndex a.menu-link {
+    color: inherit;
+    padding: 0.4rem 1rem;
+    border-bottom: none;
+}
+
+.MainMenu.menuIndex {
+    background: #f2f2f2;
+}
+
+.pageContent .list a.list-link {
+    color: #000000;
+}
+
+.titleSection {
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem 1rem;
+}
+
+.updateSuggestions {
+    color: darkgray;
+    font-size: 11.9px;
+}
+
+.titleSection .title {
+    max-width: 450px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.statusSection {
+    background: green;
+    color: white;
+    padding: 2px 10px;
+    border-radius: 3px;
+    margin: 0rem 1rem;
+}
+
+.sub_divider:after {
+    content: "|";
 }
